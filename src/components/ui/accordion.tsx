@@ -18,6 +18,7 @@ export function AccordionItem({ title, children, defaultOpen = false }: Accordio
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
+        aria-expanded={isOpen}
         className="flex w-full items-center justify-between py-6 text-left transition-all hover:text-primary"
       >
         <span className="text-lg font-medium">{title}</span>
