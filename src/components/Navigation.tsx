@@ -61,6 +61,9 @@ export function Navigation() {
             type="button"
             className="md:hidden p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -68,7 +71,7 @@ export function Navigation() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden pt-6 pb-4 border-t border-border/30 mt-4">
+          <div id="mobile-menu" className="md:hidden pt-6 pb-4 border-t border-border/30 mt-4">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <Link
