@@ -1,0 +1,3 @@
+## 2026-03-26 - ARIA expanding attributes
+**Learning:** When creating expanding components (mobile menus, accordions), it is critical to pair `aria-expanded` on the trigger with `aria-controls` pointing to the content's `id` so screen readers understand the relationship. Additionally, icon-only buttons need an `aria-label` for context and purely decorative icons should use `aria-hidden='true'`.
+**Action:** Apply `React.useId()` for generating robust IDs for mapping `aria-controls` and `aria-labelledby` dynamically in reusable components. Ensure focus states are explicitly styled for keyboard users with `focus-visible:outline-none focus-visible:ring-2`.
