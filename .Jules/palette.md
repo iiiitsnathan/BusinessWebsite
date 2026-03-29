@@ -1,0 +1,4 @@
+## 2025-03-29 - Accordion Component Accessibility Enhancements
+
+**Learning:** This application's custom UI expanding components, such as `src/components/ui/accordion.tsx`, lacked semantic bindings for screen readers (`aria-expanded`, `aria-controls`) and visual focus indicators for keyboard users (`focus-visible` styles). This makes the content unnavigable and indistinguishable from plain text for users relying on assistive technologies or keyboard-only navigation.
+**Action:** Always ensure that interactive expanding UI components like Accordions generate a unique ID using `React.useId()`, bind that ID via `aria-controls` to the interactive trigger (and bind `id` to the content container), utilize dynamic `aria-expanded` boolean states, and have explicitly visible interactive focus states via `focus-visible:outline-none focus-visible:ring-2`. Hide any purely decorative expansion icons using `aria-hidden="true"`.
