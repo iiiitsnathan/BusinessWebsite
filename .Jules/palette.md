@@ -1,0 +1,3 @@
+## 2024-04-04 - Expanding Components Accessibility
+**Learning:** Interactive and expanding components (like the mobile menu and accordions) in this React/Next.js app were missing critical accessibility attributes. Binding dynamic `aria-expanded` states to a generated `useId` and explicit `aria-controls`, along with ensuring interactive elements have clear focus rings, drastically improves the screen reader experience.
+**Action:** When auditing custom or generic UI components (especially ones lacking standard library foundations), check for `aria-expanded`, `aria-controls`, `aria-hidden` on decorative icons, and explicit `focus-visible` styles.
