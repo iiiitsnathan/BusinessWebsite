@@ -1,56 +1,62 @@
-import Link from "next/link"
-import { ArrowRight, Calendar } from "lucide-react"
+import Link from "next/link";
+import { ArrowRight, Calendar } from "lucide-react";
 
 const blogPosts = [
   {
     slug: "choosing-the-right-paper",
     title: "Choosing the Right Paper for Your Prints",
-    excerpt: "A comprehensive guide to selecting fine art papers for inkjet printing. Learn about texture, weight, and coating options to match your artistic vision.",
+    excerpt:
+      "A comprehensive guide to selecting fine art papers for inkjet printing. Learn about texture, weight, and coating options to match your artistic vision.",
     date: "February 10, 2026",
     category: "Printing",
-    readTime: "5 min read"
+    readTime: "5 min read",
   },
   {
     slug: "film-photography-beginners",
     title: "Getting Started with Film Photography",
-    excerpt: "New to shooting film? Here's everything you need to know about choosing your first camera, selecting film stocks, and understanding the basics.",
+    excerpt:
+      "New to shooting film? Here's everything you need to know about choosing your first camera, selecting film stocks, and understanding the basics.",
     date: "February 5, 2026",
     category: "Film",
-    readTime: "8 min read"
+    readTime: "8 min read",
   },
   {
     slug: "color-vs-bw-film",
     title: "Color vs Black & White: Choosing Your Film",
-    excerpt: "Each format tells a different story. Explore the emotional and technical differences between color and black & white film photography.",
+    excerpt:
+      "Each format tells a different story. Explore the emotional and technical differences between color and black & white film photography.",
     date: "January 28, 2026",
     category: "Film",
-    readTime: "6 min read"
+    readTime: "6 min read",
   },
   {
     slug: "archival-printing-tips",
     title: "How to Make Your Prints Last 100+ Years",
-    excerpt: "Discover the secrets to archival printing, from ink selection to storage conditions. Preserve your work for future generations.",
+    excerpt:
+      "Discover the secrets to archival printing, from ink selection to storage conditions. Preserve your work for future generations.",
     date: "January 20, 2026",
     category: "Printing",
-    readTime: "7 min read"
+    readTime: "7 min read",
   },
   {
     slug: "scanning-workflow",
     title: "Our Scanning Workflow Explained",
-    excerpt: "Take a behind-the-scenes look at how we scan your film. Learn about our equipment, color correction process, and quality control steps.",
+    excerpt:
+      "Take a behind-the-scenes look at how we scan your film. Learn about our equipment, color correction process, and quality control steps.",
     date: "January 12, 2026",
     category: "Scanning",
-    readTime: "4 min read"
+    readTime: "4 min read",
   },
   {
     slug: "push-pull-processing",
     title: "Understanding Push and Pull Processing",
-    excerpt: "When and why to push or pull your film. A technical guide to adjusting development times for creative control over your images.",
+    excerpt:
+      "When and why to push or pull your film. A technical guide to adjusting development times for creative control over your images.",
     date: "January 5, 2026",
     category: "Development",
-    readTime: "6 min read"
+    readTime: "6 min read",
   },
-]
+];
 
 export default function BlogPage() {
   return (
@@ -59,11 +65,15 @@ export default function BlogPage() {
       <section className="py-24 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-background to-card" />
         <div className="relative z-10 max-w-6xl mx-auto px-6">
-          <p className="text-primary uppercase tracking-[0.3em] text-sm mb-4">From the Studio</p>
-          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl mb-6">Blog</h1>
+          <p className="text-primary uppercase tracking-[0.3em] text-sm mb-4">
+            From the Studio
+          </p>
+          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl mb-6">
+            Blog
+          </h1>
           <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
-            Insights, tutorials, and stories from the world of film photography and
-            fine art printing. Learn something new or get inspired.
+            Insights, tutorials, and stories from the world of film photography
+            and fine art printing. Learn something new or get inspired.
           </p>
         </div>
       </section>
@@ -80,7 +90,9 @@ export default function BlogPage() {
                 {/* Placeholder image area */}
                 <div className="aspect-[16/10] bg-gradient-to-br from-muted to-muted/50 relative overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-muted-foreground/30 font-serif text-6xl">{post.title.charAt(0)}</span>
+                    <span className="text-muted-foreground/30 font-serif text-6xl">
+                      {post.title.charAt(0)}
+                    </span>
                   </div>
                   <div className="absolute top-4 left-4">
                     <span className="bg-primary/90 text-primary-foreground text-xs uppercase tracking-wider px-3 py-1">
@@ -121,9 +133,12 @@ export default function BlogPage() {
       {/* Newsletter CTA */}
       <section className="py-24">
         <div className="max-w-2xl mx-auto px-6 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl mb-4">Stay in the loop</h2>
+          <h2 className="font-serif text-3xl md:text-4xl mb-4">
+            Stay in the loop
+          </h2>
           <p className="text-muted-foreground mb-8">
-            Get occasional updates on new blog posts, studio news, and film photography tips.
+            Get occasional updates on new blog posts, studio news, and film
+            photography tips.
           </p>
           <form className="flex flex-col sm:flex-row gap-4">
             <input
@@ -141,5 +156,5 @@ export default function BlogPage() {
         </div>
       </section>
     </main>
-  )
+  );
 }

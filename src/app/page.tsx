@@ -1,26 +1,37 @@
-import Link from "next/link"
-import { Printer, Film, Scan, ArrowRight, Mail, MapPin, Phone } from "lucide-react"
+import Link from "next/link";
+import {
+  Printer,
+  Film,
+  Scan,
+  ArrowRight,
+  Mail,
+  MapPin,
+  Phone,
+} from "lucide-react";
 
 const services = [
   {
     icon: Printer,
     title: "Inkjet Printing",
-    description: "Museum-quality prints on archival papers. From small editions to large-format pieces, we bring your digital files to life with exceptional color accuracy and longevity.",
-    href: "/services#printing"
+    description:
+      "Museum-quality prints on archival papers. From small editions to large-format pieces, we bring your digital files to life with exceptional color accuracy and longevity.",
+    href: "/services#printing",
   },
   {
     icon: Film,
     title: "Film Development",
-    description: "Professional C-41 and B&W processing for 35mm and 120 film. We handle your precious film with care, delivering consistent results every time.",
-    href: "/services#development"
+    description:
+      "Professional C-41 and B&W processing for 35mm and 120 film. We handle your precious film with care, delivering consistent results every time.",
+    href: "/services#development",
   },
   {
     icon: Scan,
     title: "Film Scanning",
-    description: "High-resolution scanning up to 4000 DPI for 35mm and 120 film. Standard scans FREE with development. Get digital files that capture every detail.",
-    href: "/services#scanning"
-  }
-]
+    description:
+      "High-resolution scanning up to 4000 DPI for 35mm and 120 film. Standard scans FREE with development. Get digital files that capture every detail.",
+    href: "/services#scanning",
+  },
+];
 
 export default function Home() {
   return (
@@ -41,8 +52,9 @@ export default function Home() {
               <span className="text-primary">meets craft</span>
             </h1>
             <p className="text-muted-foreground text-lg md:text-xl max-w-xl mb-10 leading-relaxed">
-              Professional inkjet printing, film development, and high-resolution scanning.
-              We treat every frame with the care it deserves.
+              Professional inkjet printing, film development, and
+              high-resolution scanning. We treat every frame with the care it
+              deserves.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -76,7 +88,9 @@ export default function Home() {
       <section className="py-24 bg-card">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <p className="text-primary uppercase tracking-[0.3em] text-sm mb-4">What We Do</p>
+            <p className="text-primary uppercase tracking-[0.3em] text-sm mb-4">
+              What We Do
+            </p>
             <h2 className="font-serif text-4xl md:text-5xl">Our Services</h2>
           </div>
 
@@ -108,7 +122,9 @@ export default function Home() {
         <div className="relative z-10 max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="text-primary uppercase tracking-[0.3em] text-sm mb-4">About Us</p>
+              <p className="text-primary uppercase tracking-[0.3em] text-sm mb-4">
+                About Us
+              </p>
               <h2 className="font-serif text-4xl md:text-5xl mb-6">
                 A passion for the
                 <br />
@@ -116,18 +132,20 @@ export default function Home() {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  We started this studio with a simple belief: that physical prints and
-                  film photography deserve the same care and attention as any fine art.
+                  We started this studio with a simple belief: that physical
+                  prints and film photography deserve the same care and
+                  attention as any fine art.
                 </p>
                 <p>
-                  Every roll of film, every digital file, every print that leaves our
-                  studio is handled with precision and passion. We use professional-grade
-                  equipment and archival materials to ensure your work stands the test of time.
+                  Every roll of film, every digital file, every print that
+                  leaves our studio is handled with precision and passion. We
+                  use professional-grade equipment and archival materials to
+                  ensure your work stands the test of time.
                 </p>
                 <p>
-                  Whether you're a professional photographer, an artist, or someone who
-                  simply appreciates the beauty of a well-made print, we're here to help
-                  bring your vision to life.
+                  Whether you're a professional photographer, an artist, or
+                  someone who simply appreciates the beauty of a well-made
+                  print, we're here to help bring your vision to life.
                 </p>
               </div>
             </div>
@@ -138,7 +156,9 @@ export default function Home() {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
                     <Film className="w-16 h-16 text-primary/50 mx-auto mb-4" />
-                    <p className="text-muted-foreground text-sm uppercase tracking-wider">Est. 2020</p>
+                    <p className="text-muted-foreground text-sm uppercase tracking-wider">
+                      Est. 2020
+                    </p>
                   </div>
                 </div>
               </div>
@@ -153,19 +173,39 @@ export default function Home() {
       <section className="py-24 bg-card">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <p className="text-primary uppercase tracking-[0.3em] text-sm mb-4">How It Works</p>
+            <p className="text-primary uppercase tracking-[0.3em] text-sm mb-4">
+              How It Works
+            </p>
             <h2 className="font-serif text-4xl md:text-5xl">Simple Process</h2>
           </div>
 
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              { step: "01", title: "Submit", desc: "Send us your film or digital files" },
-              { step: "02", title: "Review", desc: "We assess and confirm specifications" },
-              { step: "03", title: "Process", desc: "Expert handling of your work" },
-              { step: "04", title: "Deliver", desc: "Pickup or shipping to your door" },
+              {
+                step: "01",
+                title: "Submit",
+                desc: "Send us your film or digital files",
+              },
+              {
+                step: "02",
+                title: "Review",
+                desc: "We assess and confirm specifications",
+              },
+              {
+                step: "03",
+                title: "Process",
+                desc: "Expert handling of your work",
+              },
+              {
+                step: "04",
+                title: "Deliver",
+                desc: "Pickup or shipping to your door",
+              },
             ].map((item) => (
               <div key={item.step} className="text-center">
-                <div className="text-primary font-serif text-4xl mb-4">{item.step}</div>
+                <div className="text-primary font-serif text-4xl mb-4">
+                  {item.step}
+                </div>
                 <h3 className="font-serif text-xl mb-2">{item.title}</h3>
                 <p className="text-muted-foreground text-sm">{item.desc}</p>
               </div>
@@ -180,7 +220,9 @@ export default function Home() {
 
         <div className="relative z-10 max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <p className="text-primary uppercase tracking-[0.3em] text-sm mb-4">Get Started</p>
+            <p className="text-primary uppercase tracking-[0.3em] text-sm mb-4">
+              Get Started
+            </p>
             <h2 className="font-serif text-4xl md:text-5xl">Contact Us</h2>
           </div>
 
@@ -188,14 +230,24 @@ export default function Home() {
             <div className="bg-card border border-border/50 p-8 md:p-12">
               <div className="space-y-8">
                 <div>
-                  <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2 text-center">Email</p>
-                  <a href="mailto:nma@bbns.org" className="text-2xl text-primary hover:text-primary/80 transition-colors block text-center">
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2 text-center">
+                    Email
+                  </p>
+                  <a
+                    href="mailto:nma@bbns.org"
+                    className="text-2xl text-primary hover:text-primary/80 transition-colors block text-center"
+                  >
                     nma@bbns.org
                   </a>
                 </div>
                 <div>
-                  <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2 text-center">Phone</p>
-                  <a href="tel:6179913531" className="text-2xl text-primary hover:text-primary/80 transition-colors block text-center">
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2 text-center">
+                    Phone
+                  </p>
+                  <a
+                    href="tel:6179913531"
+                    className="text-2xl text-primary hover:text-primary/80 transition-colors block text-center"
+                  >
                     617-991-3531
                   </a>
                 </div>
@@ -210,5 +262,5 @@ export default function Home() {
         </div>
       </section>
     </main>
-  )
+  );
 }
