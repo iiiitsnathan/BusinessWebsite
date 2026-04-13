@@ -7,7 +7,8 @@ import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Route9 Printing | Professional Printing & Film Services",
-  description: "Professional inkjet printing, film development, and scanning services. Bringing your analog and digital visions to life with precision and care.",
+  description:
+    "Professional inkjet printing, film development, and scanning services. Bringing your analog and digital visions to life with precision and care.",
 };
 
 export default function RootLayout({

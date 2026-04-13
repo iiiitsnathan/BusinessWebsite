@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -9,16 +9,21 @@ export function Footer() {
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 bg-primary/10 border border-primary/30 flex items-center justify-center">
-                <span className="text-primary font-serif text-xl font-semibold">R9</span>
+                <span className="text-primary font-serif text-xl font-semibold">
+                  R9
+                </span>
               </div>
               <div>
                 <span className="font-serif text-xl tracking-wide">Route9</span>
-                <span className="block text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Printing</span>
+                <span className="block text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+                  Printing
+                </span>
               </div>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-sm mt-4">
-              Professional inkjet printing, film development, and scanning services.
-              Bringing your analog and digital visions to life with precision and care.
+              Professional inkjet printing, film development, and scanning
+              services. Bringing your analog and digital visions to life with
+              precision and care.
             </p>
           </div>
 
@@ -26,10 +31,38 @@ export function Footer() {
           <div>
             <h4 className="font-serif text-lg mb-4">Quick Links</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li><Link href="/services" className="hover:text-primary transition-colors">Services</Link></li>
-              <li><Link href="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
-              <li><Link href="/faq" className="hover:text-primary transition-colors">FAQ</Link></li>
-              <li><Link href="/#contact" className="hover:text-primary transition-colors">Contact</Link></li>
+              <li>
+                <Link
+                  href="/services"
+                  className="hover:text-primary transition-colors"
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blog"
+                  className="hover:text-primary transition-colors"
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/faq"
+                  className="hover:text-primary transition-colors"
+                >
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#contact"
+                  className="hover:text-primary transition-colors"
+                >
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -38,7 +71,10 @@ export function Footer() {
             <h4 className="font-serif text-lg mb-4">Get in Touch</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li>
-                <a href="mailto:nma@bbns.org" className="hover:text-primary transition-colors">
+                <a
+                  href="mailto:nma@bbns.org"
+                  className="hover:text-primary transition-colors"
+                >
                   nma@bbns.org
                 </a>
               </li>
@@ -58,5 +94,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
