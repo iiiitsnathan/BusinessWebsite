@@ -1,17 +1,21 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { cn } from "@/lib/utils"
-import { ChevronDown } from "lucide-react"
+import * as React from "react";
+import { cn } from "@/lib/utils";
+import { ChevronDown } from "lucide-react";
 
 interface AccordionItemProps {
-  title: string
-  children: React.ReactNode
-  defaultOpen?: boolean
+  title: string;
+  children: React.ReactNode;
+  defaultOpen?: boolean;
 }
 
-export function AccordionItem({ title, children, defaultOpen = false }: AccordionItemProps) {
-  const [isOpen, setIsOpen] = React.useState(defaultOpen)
+export function AccordionItem({
+  title,
+  children,
+  defaultOpen = false,
+}: AccordionItemProps) {
+  const [isOpen, setIsOpen] = React.useState(defaultOpen);
 
   return (
     <div className="border-b border-border/50">
@@ -24,22 +28,22 @@ export function AccordionItem({ title, children, defaultOpen = false }: Accordio
         <ChevronDown
           className={cn(
             "h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-300",
-            isOpen && "rotate-180"
+            isOpen && "rotate-180",
           )}
         />
       </button>
       <div
         className={cn(
           "overflow-hidden transition-all duration-300",
-          isOpen ? "max-h-96 pb-6" : "max-h-0"
+          isOpen ? "max-h-96 pb-6" : "max-h-0",
         )}
       >
         <div className="text-muted-foreground leading-relaxed">{children}</div>
       </div>
     </div>
-  )
+  );
 }
 
 export function Accordion({ children }: { children: React.ReactNode }) {
-  return <div className="divide-y divide-border/50">{children}</div>
+  return <div className="divide-y divide-border/50">{children}</div>;
 }
