@@ -1,0 +1,3 @@
+## 2024-04-14 - Missing ARIA expanding states and focus visibility on custom components
+**Learning:** Custom interactive components (like the mobile menu in `Navigation.tsx` and `Accordion.tsx` items) frequently omit `aria-expanded` attributes, `aria-controls` links, and explicit focus states for keyboard navigation, making them inaccessible to screen readers and difficult for keyboard users.
+**Action:** When working on interactive components (especially custom ones in this codebase), always check for and enforce the pattern: `aria-expanded`, `aria-controls` (with a generated `id`), and `focus-visible` utility classes. Decorative icons within these components should also receive `aria-hidden="true"`.
