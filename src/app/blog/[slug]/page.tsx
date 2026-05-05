@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { ArrowLeft, Calendar, Clock } from "lucide-react"
+import Link from "next/link";
+import { ArrowLeft, Calendar, Clock } from "lucide-react";
 
 // Sample blog post content
 const blogContent = {
@@ -32,12 +32,12 @@ const blogContent = {
 
       <h2>Our Recommendations</h2>
       <p>For color photography, we love Canson Platine for its incredible color gamut and subtle sheen. For black and white work, Hahnemühle Photo Rag offers beautiful tonal range with a classic fine art feel. Come by the studio and we'll help you choose the perfect paper for your project.</p>
-    `
-  }
-}
+    `,
+  },
+};
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = blogContent[params.slug as keyof typeof blogContent]
+  const post = blogContent[params.slug as keyof typeof blogContent];
 
   if (!post) {
     return (
@@ -58,7 +58,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           </div>
         </section>
       </main>
-    )
+    );
   }
 
   return (
@@ -79,7 +79,9 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             {post.category}
           </span>
 
-          <h1 className="font-serif text-4xl md:text-5xl mt-6 mb-6">{post.title}</h1>
+          <h1 className="font-serif text-4xl md:text-5xl mt-6 mb-6">
+            {post.title}
+          </h1>
 
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <span className="flex items-center gap-2">
@@ -125,5 +127,5 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         </div>
       </section>
     </main>
-  )
+  );
 }
