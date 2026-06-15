@@ -1,21 +1,22 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { cn } from "@/lib/utils"
-import { useState } from "react"
-import { Menu, X } from "lucide-react"
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
+import { useState, useId } from "react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
   { href: "/blog", label: "Blog" },
   { href: "/faq", label: "FAQ" },
-]
+];
 
 export function Navigation() {
-  const pathname = usePathname()
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const pathname = usePathname();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const menuId = useId();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/30">
@@ -24,11 +25,15 @@ export function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="w-10 h-10 bg-primary/10 border border-primary/30 flex items-center justify-center">
-              <span className="text-primary font-serif text-xl font-semibold">R9</span>
+              <span className="text-primary font-serif text-xl font-semibold">
+                R9
+              </span>
             </div>
             <div className="hidden sm:block">
               <span className="font-serif text-xl tracking-wide">Route9</span>
-              <span className="block text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Printing</span>
+              <span className="block text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+                Printing
+              </span>
             </div>
           </Link>
 
@@ -42,7 +47,7 @@ export function Navigation() {
                   "text-sm uppercase tracking-wider transition-colors link-underline",
                   pathname === link.href
                     ? "text-primary"
-                    : "text-muted-foreground hover:text-foreground"
+                    : "text-muted-foreground hover:text-foreground",
                 )}
               >
                 {link.label}
@@ -59,16 +64,26 @@ export function Navigation() {
           {/* Mobile Menu Button */}
           <button
             type="button"
-            className="md:hidden p-2"
+            className="md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-md"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-expanded={mobileMenuOpen}
+            aria-controls={menuId}
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? (
+              <X className="w-6 h-6" aria-hidden="true" />
+            ) : (
+              <Menu className="w-6 h-6" aria-hidden="true" />
+            )}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden pt-6 pb-4 border-t border-border/30 mt-4">
+          <div
+            id={menuId}
+            className="md:hidden pt-6 pb-4 border-t border-border/30 mt-4"
+          >
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <Link
@@ -79,7 +94,7 @@ export function Navigation() {
                     "text-sm uppercase tracking-wider py-2 transition-colors",
                     pathname === link.href
                       ? "text-primary"
-                      : "text-muted-foreground hover:text-foreground"
+                      : "text-muted-foreground hover:text-foreground",
                   )}
                 >
                   {link.label}
@@ -97,5 +112,5 @@ export function Navigation() {
         )}
       </nav>
     </header>
-  )
+  );
 }
