@@ -1,0 +1,3 @@
+## 2024-05-23 - Mobile Menu Accessibility Pattern
+**Learning:** Found that when constructing conditional mobile menus or expanding elements, simply hiding/showing is insufficient. Need robust state binding for screen readers (`aria-expanded`), linking the toggle button to the container (`aria-controls` with `useId()`), explicit focus indicators (`focus-visible:ring-2`), and hiding decorative Lucide icons (`aria-hidden="true"`) to reduce visual noise for screen readers.
+**Action:** Always verify expanding/collapsing elements bind `aria-expanded` strictly to their boolean state and link to their container ID via `aria-controls`. Do not forget to hide decorative internal icons.
