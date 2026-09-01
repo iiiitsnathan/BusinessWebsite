@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
-import { useState } from "react"
+import { useState, useId } from "react"
 import { Menu, X } from "lucide-react"
 
 const navLinks = [
@@ -16,6 +16,7 @@ const navLinks = [
 export function Navigation() {
   const pathname = usePathname()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const mobileMenuId = useId()
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/30">
@@ -59,16 +60,22 @@ export function Navigation() {
           {/* Mobile Menu Button */}
           <button
             type="button"
-            className="md:hidden p-2"
+            className="md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-md"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-expanded={mobileMenuOpen}
+            aria-controls={mobileMenuId}
+            aria-label="Toggle mobile menu"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden pt-6 pb-4 border-t border-border/30 mt-4">
+          <div
+            id={mobileMenuId}
+            className="md:hidden pt-6 pb-4 border-t border-border/30 mt-4"
+          >
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <Link
