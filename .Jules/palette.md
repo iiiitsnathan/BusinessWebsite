@@ -1,0 +1,3 @@
+## 2026-09-11 - Accessible Mobile Menu Toggle
+**Learning:** Interactive toggle buttons (like mobile menus) must dynamically announce their state via `aria-expanded`, explicitly link to their controlled content via `aria-controls` (using a uniquely generated `id` via `useId()`), provide an explanatory `aria-label`, and visually signal keyboard focus without disrupting mouse users by using `focus-visible` utility classes.
+**Action:** Apply this comprehensive pattern of state, linking, labeling, hiding decorative children (`aria-hidden`), and focus styling to all future collapsible/interactive components.
