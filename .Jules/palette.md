@@ -1,0 +1,3 @@
+## 2026-10-14 - Accessible Mobile Menus
+**Learning:** For conditional, expanding elements like mobile menus, screen readers need explicit connection between the toggle and the content. Just adding `aria-expanded` isn't enough; generating a unique ID via `useId` and binding it to `aria-controls` ensures structural context, while `focus-visible` rings provide visual keyboard feedback without breaking standard mouse clicks.
+**Action:** Always pair `aria-expanded` with `aria-controls` for dynamically rendered collapsible regions, explicitly hide decorative icons with `aria-hidden`, and provide distinct `focus-visible` utility classes on interactive elements.
