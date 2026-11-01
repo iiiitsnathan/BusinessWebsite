@@ -1,0 +1,3 @@
+## 2024-11-01 - Mobile Navigation Accessibility
+**Learning:** React's `useId` hook is a very elegant way to link a toggle button to the container it controls via `aria-controls` for accessibility. By applying the conditional `aria-controls={isOpen ? id : undefined}`, we can correctly point screen readers to the expanding container when it is present in the DOM without causing broken references when it unmounts. Adding `focus-visible:ring-2 focus-visible:ring-primary rounded-md` enhances the keyboard experience dramatically without changing the pointer experience.
+**Action:** Use this same pattern (conditional `aria-controls` coupled with `useId`) for other dynamically rendered popups, dropdowns, and accordions where elements are unmounted instead of just hidden.
