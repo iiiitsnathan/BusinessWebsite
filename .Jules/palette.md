@@ -1,0 +1,3 @@
+## 2026-11-02 - [Accessible Mobile Menu ARIA Pattern]
+**Learning:** When creating expanding mobile navigation menus that hide/show content, applying a robust ARIA pattern (aria-expanded bound to state, aria-controls pointing to the generated container id, and dynamic aria-labels) ensures that screen reader users receive immediate feedback about the menu's state and function, preventing interaction ambiguity. Decorative icons inside such controls must also be marked with aria-hidden='true'.
+**Action:** Always verify that interactive mobile toggle buttons include the trifecta of 'aria-expanded', 'aria-controls', and explicit semantic labels ('aria-label'), alongside accessible 'focus-visible' utility classes to aid keyboard navigation without relying purely on custom CSS.
