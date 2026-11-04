@@ -1,0 +1,4 @@
+## 2024-11-04 - Mobile Menu Accessibility Enhancements\n**Learning:** Interactive UI components that toggle visibility for content (like hamburger menus) must be tightly coupled with ARIA controls (, , ). If the content is unrendered when closed,  should be conditionally applied.\n**Action:** Add these attributes and distinct keyboard focus styles (e.g. ) to all custom toggles. Hide the decorative icons from screen readers using .
+## 2024-11-04 - Mobile Menu Accessibility Enhancements
+**Learning:** Interactive UI components that toggle visibility for content (like hamburger menus) must be tightly coupled with ARIA controls (`aria-expanded`, `aria-controls`, `aria-label`). If the content is unrendered when closed, `aria-controls` should be conditionally applied.
+**Action:** Add these attributes and distinct keyboard focus styles (e.g. `focus-visible:ring-2`) to all custom toggles. Hide the decorative icons from screen readers using `aria-hidden="true"`.
