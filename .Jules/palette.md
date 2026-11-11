@@ -1,0 +1,3 @@
+## 2026-11-11 - Accessible Mobile Menu Button
+**Learning:** Adding screen reader and keyboard accessibility to mobile toggle buttons provides significant usability gains, particularly ensuring states (aria-expanded) and targets (aria-controls) are properly linked, and avoiding focus issues by using focus-visible styles over outlines that persist on mouse click.
+**Action:** When implementing mobile toggle buttons, consistently use aria-expanded and aria-controls tied to an automatically generated useId(), and ensure focus-visible rings are applied for robust keyboard navigation without compromising mouse usability.
